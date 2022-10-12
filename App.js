@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import ButtonBasics from "./src/components/Buttons";
+import ToucheableBtn from "./src/components/TouchableBtn";
 
 export default function App() {
   return (
@@ -9,7 +10,9 @@ export default function App() {
         First text from React Native to Android c:
       </Text>
       <StatusBar style="auto" />
+
       <ButtonBasics />
+      <ToucheableBtn />
     </View>
   );
 }
