@@ -1,11 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import ButtonBasics from "./src/components/Buttons";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.title}>
+        First text from React Native to Android c:
+      </Text>
       <StatusBar style="auto" />
+      <ButtonBasics />
     </View>
   );
 }
@@ -13,8 +17,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "yellow",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  title: {
+    color: "blue",
   },
 });
