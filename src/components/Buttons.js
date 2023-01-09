@@ -1,5 +1,9 @@
 import React from "react";
-import { Button, StyleSheet, View } from "react-native";
+import { Button, View } from "react-native";
+
+import Container from "../styles/containerStyles/Container.js";
+import AltContainer from "../styles/containerStyles/AltContainer";
+import BtnContainer from "../styles/containerStyles/BtnContainer";
 
 const ButtonBasics = () => {
   const _onPressButton = () => {
@@ -7,37 +11,23 @@ const ButtonBasics = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.buttonContainer}>
+    <View style={Container}>
+      <View style={BtnContainer}>
         <Button onPress={_onPressButton} title="Press Me" />
       </View>
-      <View style={styles.buttonContainer}>
-        <Button onPress={_onPressButton} title="Press Me" color="#841584" />
+      <View style={BtnContainer}>
+        <Button
+          onPress={_onPressButton}
+          title="Press Me"
+          color="midnightblue"
+        />
       </View>
-      <View style={styles.alternativeLayoutButtonContainer}>
+      <View style={AltContainer}>
         <Button onPress={_onPressButton} title="This looks great!" />
-        <Button onPress={_onPressButton} title="OK!" color="#841584" />
+        <Button onPress={_onPressButton} title="OK!" color="purple" />
       </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    maxHeight: 200,
-    margin: 20,
-    backgroundColor: "orange",
-  },
-  buttonContainer: {
-    margin: 20,
-  },
-  alternativeLayoutButtonContainer: {
-    margin: 20,
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-});
 
 export default ButtonBasics;

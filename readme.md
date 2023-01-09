@@ -45,3 +45,7 @@ You can add universal styles here like flexDirection: row, centerAll, itemsEnd a
 
 **theme/**
 fonts- It contains global fonts like font size, font type, and font-weight. Whenever you come across situations where you need to use the same size of fonts and the same font family, you have to create a theme/font.
+
+**Generate APK**
+
+first add the eas.json and then execute the command `eas build -p android --profile preview`
