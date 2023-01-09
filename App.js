@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -10,10 +10,13 @@ import ToucheableBtn from "./src/components/TouchableBtn";
 import Home from "./src/components/Home";
 import Profile from "./src/components/Profile";
 import Title from "./src/components/Title";
+import VibrationModule from "./src/components/Vibration";
+import Forms from "./src/components/Forms";
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  const titleText = "hi c:";
   return (
     <NavigationContainer>
       <Stack.Navigator style={styles.container}>
@@ -21,13 +24,15 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{ title: "Welcome" }}
+          options={{ title: titleText }}
           Title={Title}
         />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Buttons" component={ButtonBasics} />
         <Stack.Screen name="Touchable" component={ToucheableBtn} />
         <Stack.Screen name="Modal" component={ModalComponent} />
+        <Stack.Screen name="Vibration" component={VibrationModule} />
+        <Stack.Screen name="Forms" component={Forms} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
